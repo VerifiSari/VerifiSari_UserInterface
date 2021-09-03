@@ -136,22 +136,6 @@ function StripeIBANForm(props) {
           type="text"
         />
       </Grid>
-      <Grid item xs={8}>
-        <TextField
-          variant="outlined"
-          margin="none"
-          required
-          label="Reason"
-          value={reason}
-          onChange={event => {
-            setName(event.target.value);
-          }}
-          fullWidth
-          autoFocus
-          autoComplete="off"
-          type="text"
-        />
-      </Grid>
     </Grid>
   );
 }

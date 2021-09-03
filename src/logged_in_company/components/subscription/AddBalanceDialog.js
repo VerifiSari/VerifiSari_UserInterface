@@ -18,13 +18,13 @@ import ButtonCircularProgress from "../../../shared/components/ButtonCircularPro
 
 const stripePromise = loadStripe("pk_test_6pRNASCoBOKtIshFeQd4XMUh");
 
-const paymentOptions = ["Add", "Remove"];
+const paymentOptions = ["Onboard", "Deboard"];
 
 const AddBalanceDialog = withTheme(function (props) {
   const { open, theme, onClose, onSuccess } = props;
 
   const [loading, setLoading] = useState(false);
-  const [paymentOption, setPaymentOption] = useState("Add");
+  const [paymentOption, setPaymentOption] = useState("Onboard");
   const [stripeError, setStripeError] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -45,14 +45,14 @@ const AddBalanceDialog = withTheme(function (props) {
 
   const getStripePaymentInfo = () => {
     switch (paymentOption) {
-      case "Add": {
+      case "Onboard": {
         return {
           type: "card",
           card: elements.getElement(CardElement),
           billing_details: { name: name }
         };
       }
-      case "Remove": {
+      case "Deboard": {
         return {
           type: "sepa_debit",
           sepa_debit: elements.getElement(IbanElement),
@@ -66,7 +66,7 @@ const AddBalanceDialog = withTheme(function (props) {
 
   const renderPaymentComponent = () => {
     switch (paymentOption) {
-      case "Add":
+      case "Onboard":
         return (
           <Fragment>
             <Box mb={2}>
@@ -86,7 +86,7 @@ const AddBalanceDialog = withTheme(function (props) {
             </HighlightedInformation>
           </Fragment>
         );
-      case "Remove":
+      case "Deboard":
         return (
           <Fragment>
             <Box mb={2}>

@@ -4,7 +4,7 @@ import { Switch } from "react-router-dom";
 import { withStyles } from "@material-ui/core";
 import Dashboard from "./dashboard/Dashboard";
 import Posts from "./posts/Posts";
-import Requests from "./requests/Requests";
+import information from "./information/information";
 import Subscription from "./subscription/Subscription";
 import PropsRoute from "../../shared/components/PropsRoute";
 import useLocationBlocker from "../../shared/functions/useLocationBlocker";
@@ -65,6 +65,7 @@ function Routing(props) {
     selectPosts,
     selectRequests,
     selectSubscription,
+    selectinformation,
     openAddBalanceDialog,
   } = props;
   useLocationBlocker();
@@ -83,13 +84,13 @@ function Routing(props) {
           setPosts={setPosts}
           selectPosts={selectPosts}
         /> */}
-        {/* <PropsRoute
-          path="/company/requests"
-          component={Requests}
+        <PropsRoute
+          path="/company/information"
+          component={information}
           targets={targets}
           setTargets={setTargets}
-          selectRequests={selectRequests}
-        /> */}
+          selectinformation={selectinformation}
+        />
         <PropsRoute
           path=""
           component={Subscription}

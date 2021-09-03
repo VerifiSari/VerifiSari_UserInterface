@@ -5,10 +5,10 @@ import { withStyles } from "@material-ui/core";
 import Dashboard from "./dashboard/Dashboard";
 import Posts from "./posts/Posts";
 import Requests from "./requests/Requests";
+import userprofile from "./user_profile/userprofile";
 import Subscription from "./subscription/Subscription";
 import PropsRoute from "../../shared/components/PropsRoute";
 import useLocationBlocker from "../../shared/functions/useLocationBlocker";
-import userprofile from "./user_profile/userprofile";
 
 const styles = (theme) => ({
   wrapper: {

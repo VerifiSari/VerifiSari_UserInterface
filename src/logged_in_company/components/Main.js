@@ -197,7 +197,7 @@ function Main(props) {
       description: "AzxdEs9R0hitJybSh@rm@34Juo9w",
       balanceChange: "Umesh Agarkar",
       paidUntil: "15-06-2021",
-      timestamp: "Joined",
+      timestamp: "Onboard",
     };
     transactions.push(transaction);
  transaction = {
@@ -205,7 +205,7 @@ function Main(props) {
       description: "MnhY98V!r@8TgBK0h1!DcvRT8df5",
       balanceChange: "Ajay Azaruddin",
       paidUntil: "23-06-2021",
-      timestamp: "Left",
+      timestamp: "Deboard",
     };
     transactions.push(transaction);
  transaction = {
@@ -213,7 +213,7 @@ function Main(props) {
       description: "Hyj76GbMR@ha94@z!nxFJMbg48Tn",
       balanceChange: "Jasprit Jadeja",
       paidUntil: "15-08-2021",
-      timestamp: "Joined",
+      timestamp: "Onboard",
     };
     transactions.push(transaction);
  transaction = {
@@ -221,7 +221,7 @@ function Main(props) {
       description: "Poiy67P@nTghUR!sh@bHweLK92cj",
       balanceChange: "Shardul Sharma",
       paidUntil: "30-08-2021",
-      timestamp: "Joined",
+      timestamp: "Onboard",
     };
     transactions.push(transaction);
     transactions.reverse();

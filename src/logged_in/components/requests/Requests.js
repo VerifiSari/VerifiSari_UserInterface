@@ -23,6 +23,7 @@ import stableSort from "../../../shared/functions/stableSort";
 import getSorting from "../../../shared/functions/getSorting";
 import HighlightedInformation from "../../../shared/components/HighlightedInformation";
 import ConfirmationDialog from "../../../shared/components/ConfirmationDialog";
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
 const styles = (theme) => ({
   tableWrapper: {
@@ -36,6 +37,12 @@ const styles = (theme) => ({
   },
   blackIcon: {
     color: theme.palette.common.black,
+  },
+  greenIcon: {
+    color: "#4caf50",
+  },
+  redIcon: {
+    color: "#f44336",
   },
   avatar: {
     width: 28,
@@ -105,7 +112,7 @@ function CustomTable(props) {
       _targets.splice(index, 1);
       setTargets(_targets);
       pushMessageToSnackbar({
-        text: "Your friend has been removed",
+        text: "Company request rejected!",
       });
     }, 1500);
   }, [
@@ -167,7 +174,7 @@ function CustomTable(props) {
         content={
           deleteTargetDialogRow ? (
             <span>
-              {"Do you really want to remove the friend "}
+              {"Do you really want to reject company request "}
               <b>{deleteTargetDialogRow.name}</b>
               {" from your list?"}
             </span>
@@ -207,7 +214,7 @@ function CustomTable(props) {
                       </TableCell>
                       <TableCell component="th" scope="row">
                         <Box display="flex" justifyContent="flex-end">
-                          {row.isActivated ? (
+                          {/* {row.isActivated ? (
                             <IconButton
                               className={classes.iconButton}
                               onClick={() => {
@@ -230,7 +237,8 @@ function CustomTable(props) {
                             >
                               <PlayCirlceOutlineIcon />
                             </IconButton>
-                          )}
+                          )} */}
+                          
                           <IconButton
                             className={classes.iconButton}
                             onClick={() => {
@@ -238,7 +246,16 @@ function CustomTable(props) {
                             }}
                             aria-label="Delete"
                           >
-                            <DeleteIcon className={classes.blackIcon} />
+                            <CheckCircleIcon className={classes.greenIcon} />
+                          </IconButton>
+                          <IconButton
+                            className={classes.iconButton}
+                            onClick={() => {
+                              handleDeleteTargetDialogOpen(row);
+                            }}
+                            aria-label="Delete"
+                          >
+                            <DeleteIcon className={classes.redIcon} />
                           </IconButton>
                         </Box>
                       </TableCell>

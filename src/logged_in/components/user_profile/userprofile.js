@@ -309,17 +309,7 @@ function CustomTable(props) {
               <CardBody>
                 <Form>
                   <Row>
-                    <Col className="pr-md-1" md="5">
-                      <FormGroup>
-                        <label>Company</label>
-                        <Input
-                          defaultValue="Verifisari"
-                          placeholder="Company"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="px-md-1" md="3">
+                    <Col className="pr-md-1" md="6">
                       <FormGroup>
                         <label>Username</label>
                         <Input
@@ -329,14 +319,15 @@ function CustomTable(props) {
                         />
                       </FormGroup>
                     </Col>
-                    <Col className="pl-md-1" md="4">
+                    <Col className="pl-md-1" md="6">
                       <FormGroup>
                         <label htmlFor="exampleInputEmail1">
                           Email address
                         </label>
                         <Input
-                          placeholder="seriousjokers@email.com"
+                          value="seriousjokers@email.com"
                           type="email"
+                          disabled
                         />
                       </FormGroup>
                     </Col>
@@ -403,16 +394,15 @@ function CustomTable(props) {
                       </FormGroup>
                     </Col>
                   </Row>
-                  <Row>
+                  <Row md="20">
                     <Col md="8">
                       <FormGroup>
-                        <label>About Me</label>
+                        <label>Public Key</label>
                         <Input
-                          cols="80"
-                          defaultValue="Building out loud!"
-                          placeholder="Here can be your description"
-                          rows="4"
-                          type="textarea"
+                          defaultValue="J9iUgxytByjcsXwxMN47J3MDwGfNQFnDirxWnabTQWLY"
+                          placeholder="Last Name"
+                          type="text"
+                          disabled
                         />
                       </FormGroup>
                     </Col>
@@ -423,44 +413,6 @@ function CustomTable(props) {
                 <Button className="btn-fill" color="primary" type="submit">
                   Save
                 </Button>
-              </CardFooter>
-            </Card>
-          </Col>
-          <Col md="4">
-            <Card className="card-user">
-              <CardBody>
-                <CardText />
-                <div className="author">
-                  <div className="block block-one" />
-                  <div className="block block-two" />
-                  <div className="block block-three" />
-                  <div className="block block-four" />
-                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                    {/* <img
-                      alt="..."
-                      className="avatar"
-                      src={require("assets/img/default-avatar.png").default}
-                    /> */}
-                    <h5 className="title">Serious Jokers</h5>
-                  </a>
-                  <p className="description">Ceo/Co-Founder</p>
-                </div>
-                <div className="card-description">
-                  Building out loud for solana!
-                </div>
-              </CardBody>
-              <CardFooter>
-                <div className="button-container">
-                  <Button className="btn-icon btn-round" color="facebook">
-                    <i className="fab fa-facebook" />
-                  </Button>
-                  <Button className="btn-icon btn-round" color="twitter">
-                    <i className="fab fa-twitter" />
-                  </Button>
-                  <Button className="btn-icon btn-round" color="google">
-                    <i className="fab fa-google-plus" />
-                  </Button>
-                </div>
               </CardFooter>
             </Card>
           </Col>

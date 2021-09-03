@@ -12,14 +12,14 @@ function SubscriptionInfo(props) {
   const { classes, openAddBalanceDialog } = props;
   return (
     <Toolbar className={classes.toolbar}>
-      <ListItemText primary="Employee Management" secondary="Add / Remove" />
+      <ListItemText primary="Employee Management" />
       <Button
         variant="contained"
         color="secondary"
         onClick={openAddBalanceDialog}
         disableElevation
       >
-        Add/Remove Employee
+        Onboard / Deboard Employee
       </Button>
     </Toolbar>
   );

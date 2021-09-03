@@ -219,6 +219,24 @@ function NavBar(props) {
       },
     },
     {
+      link: "/company/information",
+      name: "Candidate Information",
+      onClick: closeMobileDrawer,
+      icon: {
+        desktop: (
+          <PersonAddIcon
+            className={
+              selectedTab === "information"
+                ? classes.textPrimary
+                : "text-white"
+            }
+            fontSize="small"
+          />
+        ),
+        mobile: <PersonAddIcon className="text-white" />,
+      },
+    },
+    {
       link: "/",
       name: "Logout",
       icon: {
