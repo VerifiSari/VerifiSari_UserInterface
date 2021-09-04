@@ -176,8 +176,8 @@ function RegisterDialog(props) {
             }
             label={
               <Typography variant="body1">
-                I agree to the
-                <span
+                I agree to the terms of service
+                {/* <span
                   className={classes.link}
                   onClick={isLoading ? null : openTermsDialog}
                   tabIndex={0}
@@ -194,7 +194,7 @@ function RegisterDialog(props) {
                 >
                   {" "}
                   terms of service
-                </span>
+                </span> */}
               </Typography>
             }
           />

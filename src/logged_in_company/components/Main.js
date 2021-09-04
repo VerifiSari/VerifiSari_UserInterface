@@ -92,7 +92,7 @@ function Main(props) {
       companyName: "Company 2",
       designation: "Senior Software Engineer",
       startDate: "01-04-2020",
-      endDate: "31-12-9999",
+      endDate: "",
       isActivated: true,
     };
     targets.push(target);

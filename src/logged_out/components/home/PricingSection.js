@@ -114,11 +114,11 @@ function PricingSection(props) {
     width="400px"
   />
       <div class="card-body">
-        <h5 class="card-title">Company</h5>
-        <p class="card-text">
+        <h4 class="card-title" >Company</h4>
+        <p class="card-text" style={{ fontSize: "20px" }}>
         Are you looking to verify Job applicants work experience and issue work experience certificates in secure manner?
         </p>
-        <a href="#" class="btn btn-primary">Explore</a>
+        {/* <a href="#" class="btn btn-primary">Explore</a> */}
       </div>
     </div>
   </div>
@@ -132,11 +132,11 @@ function PricingSection(props) {
     width="400px"
   />
       <div class="card-body">
-        <h5 class="card-title">Employee</h5>
-        <p class="card-text">
+        <h4 class="card-title">Employee</h4>
+        <p class="card-text" style={{ fontSize: "20px" }}>
         Are you looking to share your work experience with potential employers and maintain your work achievements in secured manner?
         </p>
-        <a href="#" class="btn btn-primary">Explore</a>
+        {/* <a href="#" class="btn btn-primary">Explore</a> */}
       </div>
     </div>
   </div>
