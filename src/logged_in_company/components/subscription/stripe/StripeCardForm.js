@@ -30,7 +30,7 @@ function StripeCardForm(props) {
             setName(event.target.value);
           }}
           fullWidth
-          autoFocus
+          
           autoComplete="off"
           type="text"
         />
@@ -40,13 +40,13 @@ function StripeCardForm(props) {
           variant="outlined"
           margin="none"
           required
-          label="Name"
+          label="Designation"
           value={name}
           onChange={event => {
             setName(event.target.value);
           }}
           fullWidth
-          autoFocus
+          
           autoComplete="off"
           type="text"
         />
@@ -62,7 +62,7 @@ function StripeCardForm(props) {
             setName(event.target.value);
           }}
           fullWidth
-          autoFocus
+          
           autoComplete="off"
           type="text"
         />

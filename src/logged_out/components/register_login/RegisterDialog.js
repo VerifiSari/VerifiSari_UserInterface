@@ -159,6 +159,10 @@ function RegisterDialog(props) {
             isVisible={isPasswordVisible}
             onVisibilityChange={setIsPasswordVisible}
           />
+      <select>
+        <option value="individual">Individual</option>
+        <option value="company">Company</option>
+      </select><br></br>
           <FormControlLabel
             style={{ marginRight: 0 }}
             control={

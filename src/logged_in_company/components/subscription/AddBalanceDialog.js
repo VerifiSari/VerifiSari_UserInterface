@@ -10,6 +10,7 @@ import {
 } from "@stripe/react-stripe-js";
 import { Grid, Button, Box, withTheme } from "@material-ui/core";
 import StripeCardForm from "./stripe/StripeCardForm";
+import PromoteForm from "./stripe/PromoteForm";
 import StripeIbanForm from "./stripe/StripeIBANForm";
 import FormDialog from "../../../shared/components/FormDialog";
 import ColoredButton from "../../../shared/components/ColoredButton";
@@ -18,7 +19,7 @@ import ButtonCircularProgress from "../../../shared/components/ButtonCircularPro
 
 const stripePromise = loadStripe("pk_test_6pRNASCoBOKtIshFeQd4XMUh");
 
-const paymentOptions = ["Onboard", "Deboard"];
+const paymentOptions = ["Onboard", "Deboard","Promote"];
 
 const AddBalanceDialog = withTheme(function (props) {
   const { open, theme, onClose, onSuccess } = props;
@@ -59,6 +60,13 @@ const AddBalanceDialog = withTheme(function (props) {
           billing_details: { email: email, name: name }
         };
       }
+      case "Promote": {
+        return {
+          type: "card",
+          card: elements.getElement(CardElement),
+          billing_details: { name: name }
+        };
+      }
       default:
         throw new Error("No case selected in switch statement");
     }
@@ -80,10 +88,10 @@ const AddBalanceDialog = withTheme(function (props) {
                 onAmountChange={onAmountChange}
               />
             </Box>
-            <HighlightedInformation>
-              {/* You can check this integration using the credit card number{" "}
-              <b>4242 4242 4242 4242 04 / 24 24 242 42424</b> */}
-            </HighlightedInformation>
+            {/* <HighlightedInformation>
+              You can check this integration using the credit card number{" "}
+              <b>4242 4242 4242 4242 04 / 24 24 242 42424</b>
+            </HighlightedInformation> */}
           </Fragment>
         );
       case "Deboard":
@@ -102,11 +110,31 @@ const AddBalanceDialog = withTheme(function (props) {
                 onAmountChange={onAmountChange}
               />
             </Box>
-            <HighlightedInformation>
-              {/* You can check this integration using the IBAN
+            {/* <HighlightedInformation>
+              You can check this integration using the IBAN
               <br />
-              <b>DE89370400440532013000</b> */}
-            </HighlightedInformation>
+              <b>DE89370400440532013000</b> 
+            </HighlightedInformation> */}
+          </Fragment>
+        );
+        case "Promote":
+        return (
+          <Fragment>
+            <Box mb={2}>
+              <PromoteForm
+                stripeError={stripeError}
+                setStripeError={setStripeError}
+                setName={setName}
+                name={name}
+                amount={amount}
+                amountError={amountError}
+                onAmountChange={onAmountChange}
+              />
+            </Box>
+           {/*  <HighlightedInformation>
+              You can check this integration using the credit card number{" "}
+              <b>4242 4242 4242 4242 04 / 24 24 242 42424</b> 
+            </HighlightedInformation>*/}
           </Fragment>
         );
       default:

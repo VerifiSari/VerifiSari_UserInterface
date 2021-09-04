@@ -150,6 +150,10 @@ function LoginDialog(props) {
               onVisibilityChange={setIsPasswordVisible}
               isVisible={isPasswordVisible}
             />
+            <select>
+        <option value="individual">Individual</option>
+        <option value="company">Company</option>
+      </select><br></br>
             <FormControlLabel
               className={classes.formControlLabel}
               control={<Checkbox color="primary" />}

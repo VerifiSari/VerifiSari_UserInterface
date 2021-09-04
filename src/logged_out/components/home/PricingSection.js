@@ -11,6 +11,9 @@ import {
 import PriceCard from "./PriceCard";
 import calculateSpacing from "./calculateSpacing";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card, Button } from 'react-bootstrap';
+
 const styles = theme => ({
   containerFix: {
     [theme.breakpoints.down("md")]: {
@@ -98,35 +101,46 @@ function PricingSection(props) {
               features={["Feature 1", "Feature 2", "Feature 3"]}
             />
           </Grid> */}
-          <Grid
-            item
-            className={classes.cardWrapper}
-            xs={12}
-            sm={6}
-            lg={3}
-            data-aos="zoom-in-up"
-            data-aos-delay={isWidthUp("md", width) ? "400" : "0"}
-          >
-            <PriceCard
-              title="Employee"
-              features={["Are you looking to share your work experience with potential employers and maintain your work achievements in secured manner?"]}
-            />
-          </Grid>
-          <Grid
-            item
-            className={classes.cardWrapper}
-            xs={12}
-            sm={6}
-            lg={3}
-            data-aos="zoom-in-up"
-            data-aos-delay={isWidthUp("md", width) ? "600" : "200"}
-          >
-            <PriceCard
-              title="Company"
-              features={["Are you looking to verify Job applicants work experience and issue work experience certificates in secure manner?"]}
-            />
-          </Grid>
+          
         </Grid>
+        <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+    <img
+    src={`${process.env.PUBLIC_URL}/images/logged_out/comp.jpg`}
+    class="card-img-top"
+    alt="..."
+    height="400px"
+    width="400px"
+  />
+      <div class="card-body">
+        <h5 class="card-title">Company</h5>
+        <p class="card-text">
+        Are you looking to verify Job applicants work experience and issue work experience certificates in secure manner?
+        </p>
+        <a href="#" class="btn btn-primary">Explore</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+    <img
+    src={`${process.env.PUBLIC_URL}/images/logged_out/employee.png`}
+    class="card-img-top"
+    alt="..."
+    height="400px"
+    width="400px"
+  />
+      <div class="card-body">
+        <h5 class="card-title">Employee</h5>
+        <p class="card-text">
+        Are you looking to share your work experience with potential employers and maintain your work achievements in secured manner?
+        </p>
+        <a href="#" class="btn btn-primary">Explore</a>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   );

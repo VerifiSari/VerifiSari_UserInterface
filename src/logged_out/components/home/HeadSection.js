@@ -15,7 +15,6 @@ import {
 import WaveBorder from "../../../shared/components/WaveBorder";
 import ZoomImage from "../../../shared/components/ZoomImage";
 
-
 const styles = (theme) => ({
   extraLargeButtonLabel: {
     fontSize: theme.typography.body1.fontSize,
@@ -79,6 +78,7 @@ const styles = (theme) => ({
   container: {
     marginTop: theme.spacing(6),
     marginBottom: theme.spacing(12),
+    
     [theme.breakpoints.down("md")]: {
       marginBottom: theme.spacing(9),
     },
@@ -90,8 +90,10 @@ const styles = (theme) => ({
     },
   },
   containerFix: {
+    paddingLeft: theme.spacing(100),
     [theme.breakpoints.up("md")]: {
       maxWidth: "none !important",
+      
     },
   },
   waveBorder: {
@@ -104,21 +106,22 @@ function HeadSection(props) {
   return (
     <Fragment>
       <div className={classNames("lg-p-top", classes.wrapper)}>
-        <div className={classNames("container-fluid", classes.container)}>
-          <Box display="flex" justifyContent="center" className="row">
-            <Card
+        {/* <div className={classNames("container-fluid", classes.container)}>  */}
+         <Box display="flex" justifyContent="center" className="row">
+            {/* <Card
               className={classes.card}
               data-aos-delay="200"
               data-aos="zoom-in"
-            >
-              <div className={classNames(classes.containerFix, "container")}>
-                <Box justifyContent="space-between" className="row">
+            > */}
+              {/* <div className={classNames(classes.containerFix, "container")}> */}
+                <Box justifyContent="space-between" className="row" alignItems="center">
                   <Grid item xs={12} md={5}>
                     <Box
                       display="flex"
                       flexDirection="column"
                       justifyContent="space-between"
                       height="100%"
+                      ml = {20}
                     >
                       {/* <Box mb={4}>
                         <Typography
@@ -129,21 +132,21 @@ function HeadSection(props) {
                       </Box> */}
                       <center>
                         <img
-                          src={`${process.env.PUBLIC_URL}/images/card/logo.png`}
+                          src={`${process.env.PUBLIC_URL}/images/card/logo_2.png`}
                           width="280" height="280"
                         /></center>
-                      <div>
+                      <div> 
                         <Box mb={2}>
                           <Typography
                             variant={isWidthUp("lg", width) ? "h5" : "body1"}
-                            color="customBlack"
+                            color="primary"
                           >
                             VerifiSari is a smart way of securely maintaining and verifying employee work experience
                           </Typography>
                         </Box>
                         <Button
                           variant="contained"
-                          color="secondary"
+                          color="primary"
                           fullWidth
                           className={classes.extraLargeButton}
                           classes={{ label: classes.extraLargeButtonLabel }}
@@ -154,21 +157,26 @@ function HeadSection(props) {
                       </div>
                     </Box>
                   </Grid>
-                  <Hidden smDown>
-                    <Grid item md={6}>
+                  {/* <Hidden smDown> */}
+                  
+                    <Grid item md={5}>
+                    {/* <Box mb={2}> */}
                       <img
-                        src={`${process.env.PUBLIC_URL}/images/logged_out/landing.gif`}
-                        className={classes.image}
-                        alt="header example"
+                        src={`${process.env.PUBLIC_URL}/images/logged_out/head_anim.gif`}
+                        // className={classes.image}
+                        alt="Verification Animation"
                         width="400" height="460"
+                        style={{opacity: 0.9}} 
                       />
+                      
+                    {/* </Box> */}
                     </Grid>
-                  </Hidden>
+                  {/* </Hidden> */}
                 </Box>
-              </div>
-            </Card>
+              {/* </div> */}
+            {/* </Card> */}
           </Box>
-        </div>
+        {/* </div> */}
       </div>
       <WaveBorder
         upperColor={theme.palette.secondary.main}

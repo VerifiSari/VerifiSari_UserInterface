@@ -42,11 +42,11 @@ const features = [
   },
   {
     color: "#00C853",
-    headline: "Employee hub",
+    headline: "Background check",
     text:
-      "One-stop shop for maintaining all employement related experience certificate and achievements.",
+      "Request and verify candidate work experience without waiting for a external background check.",
     icon: <img
-      src={`${process.env.PUBLIC_URL}/images/card/03.jpg`}
+      src={`${process.env.PUBLIC_URL}/images/card/04.jpg`}
       width="200" height="200"
     />,
     mdDelay: "0",
@@ -54,11 +54,11 @@ const features = [
   },
   {
     color: "#00C853",
-    headline: "Background check",
+    headline: "Employee hub",
     text:
-      "Request and verify candidate work experience without waiting for a external background check.",
+      "One-stop shop for maintaining all employement related experience certificate and achievements.",
     icon: <img
-      src={`${process.env.PUBLIC_URL}/images/card/04.jpg`}
+      src={`${process.env.PUBLIC_URL}/images/card/03.png`}
       width="200" height="200"
     />,
     mdDelay: "0",

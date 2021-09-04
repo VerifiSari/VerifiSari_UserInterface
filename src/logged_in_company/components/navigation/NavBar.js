@@ -22,6 +22,7 @@ import {
 } from "@material-ui/core";
 
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import AssignmentIndRoundedIcon from '@material-ui/icons/AssignmentIndRounded';
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import ImageIcon from "@material-ui/icons/Image";
 import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
@@ -224,7 +225,7 @@ function NavBar(props) {
       onClick: closeMobileDrawer,
       icon: {
         desktop: (
-          <PersonAddIcon
+          <AssignmentIndRoundedIcon
             className={
               selectedTab === "information"
                 ? classes.textPrimary
@@ -233,7 +234,7 @@ function NavBar(props) {
             fontSize="small"
           />
         ),
-        mobile: <PersonAddIcon className="text-white" />,
+        mobile: <AssignmentIndRoundedIcon className="text-white" />,
       },
     },
     {

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ListItemText, Button, Toolbar, withStyles } from "@material-ui/core";
+import EditRoundedIcon from '@material-ui/icons/EditRounded';
 
 const styles = {
   toolbar: {
@@ -19,7 +20,7 @@ function SubscriptionInfo(props) {
         onClick={openAddBalanceDialog}
         disableElevation
       >
-        Onboard / Deboard Employee
+        <EditRoundedIcon className="text-white" />
       </Button>
     </Toolbar>
   );
